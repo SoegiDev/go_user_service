@@ -106,6 +106,6 @@ func serveApplication() {
 	protectedLogRoutes.Use(middleware.JWTAuthMiddleware())
 
 	if err := router.Run(port); err != nil {
-		log.Fatalf("Failed to start server: %v", err)
+		log.Printf("Failed to start server: %v\n", err)
 	}
 }
